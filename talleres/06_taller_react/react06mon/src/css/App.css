@@ -1,0 +1,247 @@
+:root {
+  --background-light: #f0f4f8;
+  --background-gradient: #d9e2ec;
+  --text-primary: #243b53;
+  --text-secondary: #334e68;
+  --card-background: #ffffff;
+  --button-primary: #3498db;
+  --button-hover: #2980b9;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--background-light);
+  background-image: linear-gradient(to bottom right, var(--background-light), var(--background-gradient));
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--text-secondary);
+}
+
+#root {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px var(--shadow-light);
+  padding: 30px;
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+#root:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow-medium);
+}
+
+h1 {
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px var(--shadow-light);
+}
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+a {
+  color: var(--button-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--button-hover);
+  text-decoration: underline;
+}
+
+button {
+  background-color: var(--button-primary);
+  color: var(--card-background);
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  margin: 10px 5px;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+.contador, .redux-contador {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+}
+
+.contador p, .redux-contador p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.tema-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--button-primary);
+  color: var(--card-background);
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.tema-toggle:hover {
+  background-color: var(--button-hover);
+  transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  #root {
+    padding: 20px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #root {
+    padding: 15px;
+    width: 95%;
+  }
+}
+
+
+
+/* Estilos actualizados para listas */
+ul, ol {
+  text-align: center;
+  padding: 15px;
+  margin: 20px auto;
+  background-color: var(--list-background);
+  border-radius: 8px;
+  border: 2px solid var(--list-border);
+  max-width: 80%;
+  box-shadow: 0 4px 6px var(--shadow-light);
+}
+
+li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  position: relative;
+  background-color: var(--list-item-background);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: var(--transition);
+  display: inline-block;
+  text-align: left;
+  margin: 5px;
+}
+
+li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+ul li::before {
+  content: '•';
+  color: var(--list-bullet-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+}
+
+ol {
+  counter-reset: li-counter;
+  list-style-type: none;
+}
+
+ol li {
+  counter-increment: li-counter;
+}
+
+ol li::before {
+  content: counter(li-counter);
+  color: var(--list-number-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+  margin-right: 0.5em;
+  background-color: var(--button-primary);
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 0.9em;
+}
+
+/* Ajuste para listas dentro de .contador o .redux-contador */
+.contador ul, .contador ol,
+.redux-contador ul, .redux-contador ol {
+  background-color: var(--card-background);
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+@media (max-width: 768px) {
+  ul, ol {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  li {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  ul, ol {
+    max-width: 95%;
+    padding: 8px;
+  }
+
+  li {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+}
