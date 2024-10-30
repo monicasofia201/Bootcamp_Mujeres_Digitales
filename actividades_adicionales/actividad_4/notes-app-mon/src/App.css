@@ -1,0 +1,82 @@
+/* Estilos generales del contenedor raíz */
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-image: url('https://picsum.photos/800/600');
+  background-size: cover; 
+  background-position: center; 
+  text-align: center;
+}
+
+/* Estilo del título de la aplicación */
+h1 {
+  color: #fff; 
+  margin-bottom: 1.5rem;
+  transition: color 0.3s; 
+}
+
+h1:hover {
+  color: #000; 
+}
+
+/* Contenedor principal para la aplicación */
+.container {
+  background: rgba(255, 255, 255, 0.8); 
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Estilo del área de entrada de notas */
+.note-input {
+  margin-bottom: 1.5rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 0.75rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  color: #fff; 
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de la lista de notas */
+#notesList {
+  margin-top: 1.5rem;
+}
+
+.note {
+  background: #fff;
+  color: #333; 
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Estilo para mensajes de advertencia o información */
+.read-the-docs {
+  color: #888;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
