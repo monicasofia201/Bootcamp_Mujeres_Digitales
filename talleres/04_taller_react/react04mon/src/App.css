@@ -1,0 +1,175 @@
+/* Estilo general del body */
+body {
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #34495e;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para las tarjetas (cards) */
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #3498db;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los botones */
+.btn {
+  background-color: #3498db;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-confirm {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-confirm:hover {
+  background-color: #2980b9;
+}
+
+.btn-confirm:active {
+  background-color: #1f638a;
+  transform: translateY(2px);
+}
+
+/* Estilos para campos de entrada */
+.input-field {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #2980b9;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Estilo para el resultado (lifting state up) */
+#result {
+  color: #2ecc71;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+/* Estilos para el formulario (Ejercicio 2) */
+.form-container {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 400px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+  transform: translateY(-5px);
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 1.2em;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.name-display {
+  font-size: 1.5em;
+  color: #2ecc71;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.name-display span {
+  color: #2980b9;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+}
